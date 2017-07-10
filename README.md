@@ -26,7 +26,7 @@ ext install vs-component-app
 Create a config object `ccarc` on user preference.  
 ```json
 {
-    ccarc: {   
+    "ccarc": {   
         "type": "stateless",
         "jsExtension": "js",
         "cssExtension": "css",
@@ -43,9 +43,11 @@ Create a config object `ccarc` on user preference.
 Create a config object `ccarc` on user preference
 
 ```json
-{
-    "type": "custom",
-    "templatesPath": "PATH/OF/CUSTOM/TEMPLATE/FOLDER"
+{   
+    "ccarc": {   
+        "type": "custom",
+        "templatesPath": "PATH/OF/CUSTOM/TEMPLATE/FOLDER"
+    }
 }
 ```
 
