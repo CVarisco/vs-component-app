@@ -21,9 +21,12 @@ Visual studio code extension to create react components base on [create-componen
 ```
 ext install vs-component-app
 ```
+Or link available [here](https://marketplace.visualstudio.com/items?itemName=cvarisco.vs-component-app)
 
 ## Configuration
 Create a config object `ccarc` on user preference.  
+[Here](https://github.com/CVarisco/create-component-app#you-can-also-pass-a-config-file) you can find the docs about the config object
+
 ```json
 {
     "ccarc": {   
