@@ -51,6 +51,8 @@ Create a config object `ccarc` on user preference
 }
 ```
 
+[Here](https://github.com/CVarisco/create-component-app/blob/master/docs/CUSTOM-TEMPLATES.md) you can find the documentation on how to write your own custom templates
+
 ## Contributing
 The library is open to everybody, contribute improve your skills.   
 
