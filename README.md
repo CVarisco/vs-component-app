@@ -54,9 +54,7 @@ Create a config object `ccarc` on user preference
 ## Contributing
 The library is open to everybody, contribute improve your skills.   
 
-`create-component-app` is maintained under [the Semantic Versioning guidelines](http://semver.org/).
-
-Use `npm run watch` while coding.
+`vs-component-app` is maintained under [the Semantic Versioning guidelines](http://semver.org/).
 
 ## License
 
