@@ -1,14 +1,14 @@
 const vscode = require("vscode");
 const ccarc = require("create-component-app").default;
-const defaultConfig = {   
-    "type": "stateless",
-    "jsExtension": "js",
-    "cssExtension": "css",
-    "includeTests": false,
-    "includeStories": false,
-    "indexFile": false,
-    "connected": false,
-}
+const defaultConfig = {
+  type: "stateless",
+  jsExtension: "js",
+  cssExtension: "css",
+  includeTests: false,
+  includeStories: false,
+  indexFile: false,
+  connected: false
+};
 
 /**
  * Get the config options from settings preference and merge with the default options.
@@ -18,12 +18,12 @@ function getConfig(path) {
   return new Promise((resolve, reject) => {
     const { ccarc } = vscode.workspace.getConfiguration();
 
-    vscode.window.showInputBox({ value:'ComponentName' }).then((name)=> {
+    vscode.window.showInputBox({ value: "ComponentName" }).then(name => {
       if (!name) {
-        reject('Name is undefined');
+        reject("Name is undefined");
       }
-      const config = Object.assign({path, name}, defaultConfig, ccarc);
-      resolve(config)
+      const config = Object.assign({ path, name }, defaultConfig, ccarc);
+      resolve(config);
     });
   });
 }
@@ -34,25 +34,32 @@ function getConfig(path) {
  */
 function createComponent(e) {
   const path = e.toJSON().path;
-  getConfig(path).then((config) => {
-    if (config.type === "custom") {
-      ccarc.generateFilesFromCustom(config);
-    }
+  getConfig(path).then(
+    config => {
+      if (config.type === "custom") {
+        ccarc.generateFilesFromCustom(config);
+      }
 
-    ccarc.generateFiles(config);
-  }, (error) => {
-    vscode.window.showErrorMessage(error)
-  });
+      ccarc.generateFiles(config);
+    },
+    error => {
+      vscode.window.showErrorMessage(error);
+    }
+  );
 }
 
 // this method is called when your extension is activated
 function activate(context) {
-  const disposable = vscode.commands.registerCommand(
-    "extension.create-component-app",
-    createComponent
-  );
+  try {
+    const disposable = vscode.commands.registerCommand(
+      "extension.create-component-app",
+      createComponent
+    );
 
-  context.subscriptions.push(disposable);
+    context.subscriptions.push(disposable);
+  } catch (error) {
+    console.log(error);
+  }
 }
 exports.activate = activate;
 
