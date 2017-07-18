@@ -33,7 +33,7 @@ function getConfig(path) {
  * @param {object} event from vscode.commands.registerCommand
  */
 function createComponent(e) {
-  const path = e.toJSON().path;
+  const path = e.toJSON().fsPath;
   getConfig(path).then(
     config => {
       if (config.type === "custom") {
