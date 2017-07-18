@@ -36,7 +36,7 @@ Create a config object `ccarc` on user preference.
         "includeTests": false,
         "includeStories": false,
         "indexFile": false,
-        "connected": false,
+        "connected": false
     }
 }
 ```
