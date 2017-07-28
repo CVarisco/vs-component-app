@@ -29,14 +29,25 @@ Create a config object `ccarc` on user preference.
 
 ```json
 {
-    "ccarc": {   
-        "type": "stateless",
+    "ccarc": {
+        "type": "class",
         "jsExtension": "js",
-        "cssExtension": "css",
+        "cssExtension": "scss",
         "includeTests": false,
         "includeStories": false,
         "indexFile": false,
-        "connected": false
+        "connected": false,
+        "componentMethods": [
+            "componentDidMount",
+            "shouldComponentUpdate",
+            "onClick"
+        ],
+        "fileNames": {
+            "testFileMatch": "spec",
+            "testFileName": "myTest",
+            "componentFileName": "template",
+            "styleFileName": "style"
+        }
     }
 }
 ```

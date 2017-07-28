@@ -2,7 +2,7 @@
     "name": "vs-component-app",
     "displayName": "vs-component-app",
     "description": "Visual code extension of create-component-app. Create your react component with right click on folder",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "cvarisco",
     "repository": {
         "type": "git",
