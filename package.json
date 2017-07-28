@@ -47,7 +47,7 @@
         "@types/node": "^6.0.40"
     },
     "dependencies": {
-        "create-component-app": "^0.6.3",
+        "create-component-app": "0.8.2",
         "yargs-parser": "7.0.0",
         "camelcase": "4.1.0"
     }

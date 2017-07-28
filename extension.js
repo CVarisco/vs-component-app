@@ -1,13 +1,14 @@
 const vscode = require("vscode");
 const ccarc = require("create-component-app").default;
 const defaultConfig = {
-  type: "stateless",
+  type: "class",
   jsExtension: "js",
   cssExtension: "css",
   includeTests: false,
   includeStories: false,
   indexFile: false,
-  connected: false
+  connected: false,
+  componentMethods: []
 };
 
 /**
